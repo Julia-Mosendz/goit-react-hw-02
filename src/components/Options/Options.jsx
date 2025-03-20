@@ -38,20 +38,21 @@ function Options(props) {
           Bad
         </button>
       </li>
-
-      <li>
-        <button
-          className={css.button}
-          type="button"
-          onClick={() => {
-            props.resetFeedback();
-          }}
-        >
-          Reset
-        </button>
-      </li>
+      {props.total > 0 && (
+        <li>
+          <button
+            className={css.button}
+            type="button"
+            onClick={() => {
+              props.resetFeedback();
+            }}
+          >
+            Reset
+          </button>
+        </li>
+      )}
     </ul>
   );
 }
 
-export default Options
+export default Options;
